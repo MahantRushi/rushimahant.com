@@ -40,3 +40,7 @@ Route::get('/blog.html', function () {
 Route::get('/blog-single.html', function () {
     return view('blog-single');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
