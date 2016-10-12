@@ -44,3 +44,5 @@ Route::get('/blog-single.html', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::resource('socials', 'socialsController');
