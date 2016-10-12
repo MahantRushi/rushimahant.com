@@ -2,17 +2,19 @@
 
 namespace App\Repositories;
 
-use App\Models\socials;
+use App\Models\services;
 use InfyOm\Generator\Common\BaseRepository;
 
-class socialsRepository extends BaseRepository
+class servicesRepository extends BaseRepository
 {
     /**
      * @var array
      */
     protected $fieldSearchable = [
         'order',
-        'icon',
+        'logo',
+        'title',
+        'description',
         'link',
         'target'
     ];
@@ -22,6 +24,6 @@ class socialsRepository extends BaseRepository
      **/
     public function model()
     {
-        return socials::class;
+        return services::class;
     }
 }

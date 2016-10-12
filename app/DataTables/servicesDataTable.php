@@ -2,11 +2,11 @@
 
 namespace App\DataTables;
 
-use App\Models\socials;
+use App\Models\services;
 use Form;
 use Yajra\Datatables\Services\DataTable;
 
-class socialsDataTable extends DataTable
+class servicesDataTable extends DataTable
 {
 
     /**
@@ -16,7 +16,7 @@ class socialsDataTable extends DataTable
     {
         return $this->datatables
             ->eloquent($this->query())
-            ->addColumn('action', 'socials.datatables_actions')
+            ->addColumn('action', 'services.datatables_actions')
             ->make(true);
     }
 
@@ -27,9 +27,9 @@ class socialsDataTable extends DataTable
      */
     public function query()
     {
-        $socials = socials::query();
+        $services = services::query();
 
-        return $this->applyScopes($socials);
+        return $this->applyScopes($services);
     }
 
     /**
@@ -73,7 +73,9 @@ class socialsDataTable extends DataTable
     {
         return [
             'order' => ['name' => 'order', 'data' => 'order'],
-            'icon' => ['name' => 'icon', 'data' => 'icon'],
+            'logo' => ['name' => 'logo', 'data' => 'logo', 'render' => '"<img src=\""+data+"\" height=\"50\"/>"'],
+            'title' => ['name' => 'title', 'data' => 'title'],
+            'description' => ['name' => 'description', 'data' => 'description'],
             'link' => ['name' => 'link', 'data' => 'link'],
             'target' => ['name' => 'target', 'data' => 'target']
         ];
@@ -86,6 +88,6 @@ class socialsDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'socials';
+        return 'services';
     }
 }

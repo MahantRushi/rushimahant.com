@@ -13,6 +13,7 @@
 
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
 
     @yield('css')
 </head>
@@ -149,5 +150,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.3/js/app.min.js"></script>
 
     @yield('scripts')
+    <!-- Page script -->
+    <script>
+        $(function () {
+                    //Initialize Select2 Elements
+                    $(".select2").select2();
+
+                    $(".select2icons").select2({
+                        templateResult: function (data) {
+                            if (!data.id) { return data.text; }
+                            var $result= $(
+                                    '<i class="pe-7s-'+data.text+'" style="font-size:20px;margin-top: 5px;"></i> <span style="position: relative; top: -4px;left: 5px;text-transform:capitalize;">' + data.text + '</span>'
+                            );
+                            return $result;
+                        },
+                        templateSelection: function (data) {
+                            if (!data.id) { return data.text; }
+                            var $result= $(
+                                    '<i class="pe-7s-'+data.text+'" style="font-size:20px;margin-top: 5px;"></i> <span style="position: relative; top: -4px;left: 5px;text-transform:capitalize;">' + data.text + '</span>'
+                            );
+                            return $result;
+                        }
+                    });
+                });
+    </script>
 </body>
 </html>

@@ -2,10 +2,10 @@
 
 namespace App\Repositories;
 
-use App\Models\socials;
+use App\Models\homepages;
 use InfyOm\Generator\Common\BaseRepository;
 
-class socialsRepository extends BaseRepository
+class homepagesRepository extends BaseRepository
 {
     /**
      * @var array
@@ -13,6 +13,9 @@ class socialsRepository extends BaseRepository
     protected $fieldSearchable = [
         'order',
         'icon',
+        'title',
+        'punchline',
+        'backgroundImage',
         'link',
         'target'
     ];
@@ -22,6 +25,6 @@ class socialsRepository extends BaseRepository
      **/
     public function model()
     {
-        return socials::class;
+        return homepages::class;
     }
 }

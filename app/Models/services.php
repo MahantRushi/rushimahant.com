@@ -6,15 +6,15 @@ use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * Class socials
+ * Class services
  * @package App\Models
- * @version October 12, 2016, 11:56 am UTC
+ * @version October 12, 2016, 5:53 pm UTC
  */
-class socials extends Model
+class services extends Model
 {
     use SoftDeletes;
 
-    public $table = 'socials';
+    public $table = 'services';
     
 
     protected $dates = ['deleted_at'];
@@ -22,7 +22,9 @@ class socials extends Model
 
     public $fillable = [
         'order',
-        'icon',
+        'logo',
+        'title',
+        'description',
         'link',
         'target'
     ];
@@ -33,8 +35,10 @@ class socials extends Model
      * @var array
      */
     protected $casts = [
-        'order'=> 'integer',
-        'icon' => 'string',
+        'order' => 'integer',
+        'logo' => 'string',
+        'title' => 'string',
+        'description' => 'string',
         'link' => 'string',
         'target' => 'string'
     ];
@@ -45,8 +49,10 @@ class socials extends Model
      * @var array
      */
     public static $rules = [
-        'icon' => 'required',
-        'link' => 'required',
+        'order' => 'required',
+        'logo' => 'required',
+        'title' => 'required',
+        'description' => 'required',
         'target' => 'required'
     ];
 

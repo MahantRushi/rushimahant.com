@@ -2,11 +2,11 @@
 
 namespace App\DataTables;
 
-use App\Models\socials;
+use App\Models\homepages;
 use Form;
 use Yajra\Datatables\Services\DataTable;
 
-class socialsDataTable extends DataTable
+class homepagesDataTable extends DataTable
 {
 
     /**
@@ -16,7 +16,7 @@ class socialsDataTable extends DataTable
     {
         return $this->datatables
             ->eloquent($this->query())
-            ->addColumn('action', 'socials.datatables_actions')
+            ->addColumn('action', 'homepages.datatables_actions')
             ->make(true);
     }
 
@@ -27,9 +27,9 @@ class socialsDataTable extends DataTable
      */
     public function query()
     {
-        $socials = socials::query();
+        $homepages = homepages::query();
 
-        return $this->applyScopes($socials);
+        return $this->applyScopes($homepages);
     }
 
     /**
@@ -73,7 +73,10 @@ class socialsDataTable extends DataTable
     {
         return [
             'order' => ['name' => 'order', 'data' => 'order'],
-            'icon' => ['name' => 'icon', 'data' => 'icon'],
+            'icon' => ['name' => 'icon', 'data' => 'icon', 'render' => '"<i class=\"pe-7s-"+data+"\" style=\"font-size:40px;\"></i>"'],
+            'title' => ['name' => 'title', 'data' => 'title'],
+            'punchline' => ['name' => 'punchline', 'data' => 'punchline'],
+            'backgroundImage' => ['name' => 'backgroundImage', 'data' => 'backgroundImage', 'render' => '"<img src=\""+data+"\" height=\"50\"/>"'],
             'link' => ['name' => 'link', 'data' => 'link'],
             'target' => ['name' => 'target', 'data' => 'target']
         ];
@@ -86,6 +89,6 @@ class socialsDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'socials';
+        return 'homepages';
     }
 }

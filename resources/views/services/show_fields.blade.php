@@ -1,42 +1,54 @@
 <!-- Id Field -->
 <div class="form-group">
     {!! Form::label('id', 'Id:') !!}
-    <p>{!! $socials->id !!}</p>
+    <p>{!! $services->id !!}</p>
 </div>
 
 <!-- Order Field -->
 <div class="form-group">
     {!! Form::label('order', 'Order:') !!}
-    <p>{!! $socials->order !!}</p>
+    <p>{!! $services->order !!}</p>
 </div>
 
-<!-- Icon Field -->
+<!-- Logo Field -->
 <div class="form-group">
-    {!! Form::label('icon', 'Icon:') !!}
-    <p>{!! $socials->icon !!}</p>
+    {!! Form::label('logo', 'Logo:') !!}
+    <p><img src="{!! $services->logo !!}" height="50"/></p>
+</div>
+
+<!-- Title Field -->
+<div class="form-group">
+    {!! Form::label('title', 'Title:') !!}
+    <p>{!! $services->title !!}</p>
+</div>
+
+<!-- Description Field -->
+<div class="form-group">
+    {!! Form::label('description', 'Description:') !!}
+    <p>{!! $services->description !!}</p>
 </div>
 
 <!-- Link Field -->
 <div class="form-group">
     {!! Form::label('link', 'Link:') !!}
-    <p>{!! $socials->link !!}</p>
+    <p>{!! $services->link !!}</p>
 </div>
 
 <!-- Target Field -->
 <div class="form-group">
     {!! Form::label('target', 'Target:') !!}
-    <p>{!! $socials->target !!}</p>
+    <p>{!! $services->target !!}</p>
 </div>
 
 <!-- Created At Field -->
 <div class="form-group">
     {!! Form::label('created_at', 'Created At:') !!}
-    <p>{!! $socials->created_at !!}</p>
+    <p>{!! $services->created_at !!}</p>
 </div>
 
 <!-- Updated At Field -->
 <div class="form-group">
     {!! Form::label('updated_at', 'Updated At:') !!}
-    <p>{!! $socials->updated_at !!}</p>
+    <p>{!! $services->updated_at !!}</p>
 </div>
 
