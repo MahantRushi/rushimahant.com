@@ -62,3 +62,5 @@ Route::resource('clients', 'clientsController');
 Route::resource('facts', 'factsController');
 
 Route::resource('works', 'worksController');
+
+Route::resource('education', 'educationController');

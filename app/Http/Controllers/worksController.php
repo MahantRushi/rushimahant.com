@@ -18,6 +18,7 @@ class worksController extends AppBaseController
 
     public function __construct(worksRepository $worksRepo)
     {
+        $this->middleware('auth');
         $this->worksRepository = $worksRepo;
     }
 

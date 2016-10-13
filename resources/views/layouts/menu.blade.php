@@ -20,3 +20,7 @@
     <a href="{!! route('works.index') !!}"><i class="fa fa-suitcase"></i><span>works</span></a>
 </li>
 
+<li class="{{ Request::is('education*') ? 'active' : '' }}">
+    <a href="{!! route('education.index') !!}"><i class="fa fa-graduation-cap"></i><span>education</span></a>
+</li>
+
