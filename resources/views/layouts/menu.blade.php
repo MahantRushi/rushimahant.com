@@ -13,6 +13,10 @@
 </li>
 
 <li class="{{ Request::is('facts*') ? 'active' : '' }}">
-    <a href="{!! route('facts.index') !!}"><i class="fa fa-edit"></i><span>facts</span></a>
+    <a href="{!! route('facts.index') !!}"><i class="fa fa-coffee"></i><span>facts</span></a>
+</li>
+
+<li class="{{ Request::is('works*') ? 'active' : '' }}">
+    <a href="{!! route('works.index') !!}"><i class="fa fa-suitcase"></i><span>works</span></a>
 </li>
 

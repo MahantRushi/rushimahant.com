@@ -60,3 +60,5 @@ Route::resource('services', 'servicesController');
 Route::resource('clients', 'clientsController');
 
 Route::resource('facts', 'factsController');
+
+Route::resource('works', 'worksController');
