@@ -51,6 +51,7 @@ class homepages extends Model
      * @var array
      */
     public static $rules = [
+        'order' => 'required|integer',
         'icon' => 'required',
         'title' => 'required',
         'punchline' => 'required',

@@ -56,3 +56,5 @@ Route::post('generator_builder/generate', '\InfyOm\GeneratorBuilder\Controllers\
 Route::resource('homepages', 'homepagesController');
 
 Route::resource('services', 'servicesController');
+
+Route::resource('clients', 'clientsController');

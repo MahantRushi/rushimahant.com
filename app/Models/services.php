@@ -49,7 +49,7 @@ class services extends Model
      * @var array
      */
     public static $rules = [
-        'order' => 'required',
+        'order' => 'required|integer',
         'logo' => 'required',
         'title' => 'required',
         'description' => 'required',

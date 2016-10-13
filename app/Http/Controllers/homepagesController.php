@@ -18,6 +18,7 @@ class homepagesController extends AppBaseController
 
     public function __construct(homepagesRepository $homepagesRepo)
     {
+        $this->middleware('auth');
         $this->homepagesRepository = $homepagesRepo;
     }
 
