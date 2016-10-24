@@ -36,6 +36,7 @@ class PagesController extends Controller
      */
     public function index()
     {
-        return view('index',['myProfile'=>$this->myProfile]);
+       // dd($this->mySocial);
+        return view('index',['myProfile'=>$this->myProfile,'mySocial'=>$this->mySocial]);
     }
 }

@@ -21,10 +21,9 @@
                 <div class="header-bottom">
                     <!-- SOCIAL -->
                     <p>
-                        <a class="social-link facebook" href="https://www.facebook.com/dreamzrush"></a>
-                        <a class="social-link twitter" href="https://twitter.com/mahantrushi"></a>
-                        <a class="social-link github" href="https://github.com/MahantRushi"></a>
-                        <a class="social-link instagram" href="https://www.instagram.com/dreamzrush/"></a>
+                        @foreach($mySocial as $social)
+                            <a class="social-link {{ strtolower($social->icon) }}" href="{{ $social->link }}" target="{{ $social->target }}"></a>
+                        @endforeach
                     </p>
                     <!-- SOCIAL -->
                 </div>
