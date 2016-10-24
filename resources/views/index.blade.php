@@ -100,25 +100,30 @@
                 <div class="fun-fact">
                     <i class="pe-7s-map-marker"></i>
                     <!--<img src="images/site/icon-03.png" alt="image"/>-->
-                    <h4>based in Melbourne, VIC, AU</h4>
+                    <h4>{{ $myProfile->location }}</h4>
                 </div>
                 <!-- fun-fact -->
                 <!-- fun-fact -->
                 <div class="fun-fact">
                     <i class="pe-7s-call"></i>
-                    <h4>Tel : +61 434 673 260</h4>
+                    <h4>Tel : {{ $myProfile->mobile }}</h4>
                 </div>
                 <!-- fun-fact -->
                 <!-- fun-fact -->
                 <div class="fun-fact">
                     <i class="pe-7s-mail"></i>
-                    <h4>rushimahant3 [at] gmail.com</h4>
+                    <h4>{{ $myProfile->email }}</h4>
                 </div>
                 <!-- fun-fact -->
                 <!-- fun-fact -->
                 <div class="fun-fact">
-                    <i class="pe-7s-check"></i>
-                    <h4>Freelance Available</h4>
+                    @if($myProfile->freelance=="Not")
+                        <i class="pe-7s-close"></i>
+                        <h4>Freelance Not Available</h4>
+                    @else
+                        <i class="pe-7s-check"></i>
+                        <h4>Freelance Available</h4>
+                    @endif
                 </div>
                 <!-- fun-fact -->
             </div>

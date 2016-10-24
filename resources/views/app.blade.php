@@ -12,11 +12,11 @@
         <header id="masthead" class="header" role="banner">
             <!-- header-wrap -->
             <div class="header-wrap layout-full">
-                <img src="images/home/home1.jpg" alt="profile-image">
+                <img src="{{ $myProfile->image }}" alt="profile-image">
                 <!-- image-logo -->
                 <!--<a class="header-title-link" href="index.html"><img src="../images/site/avatar.jpg" alt="avatar"></a>-->
-                <h1 class="site-title">Rushi Mahant</h1>
-                <p class="site-description">I am <strong id="typist-element" data-typist="a coder., a designer., a blogger., a reader., a traveller., a dancer.">a writer.</strong></p>
+                <h1 class="site-title">{{ $myProfile->name }}</h1>
+                <p class="site-description">I am <strong id="typist-element" data-typist="{{ $myProfile->hobbies }}">a dancer.</strong></p>
                 <!-- header-social -->
                 <div class="header-bottom">
                     <!-- SOCIAL -->
@@ -81,7 +81,7 @@
             <!-- .site-info -->
             <div class="site-info">
                 <div class="textwidget">
-                    <a href="#">Copyright &copy; 2016 by Rushi Mahant</a>
+                    <a href="/">Copyright &copy; {{ \Carbon\Carbon::now()->year }} by {{ $myProfile->name }}</a>
                 </div>
             </div>
             <!-- .site-info -->

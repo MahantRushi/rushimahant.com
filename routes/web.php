@@ -14,9 +14,12 @@
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/index.html', function () {
-    return view('index');
-});
+
+//Route::get('/index.html', function () {
+//    return view('index');
+//});
+
+Route::get('/index.html', 'PagesController@index');
 
 Route::get('/about.html', function () {
     return view('about');
