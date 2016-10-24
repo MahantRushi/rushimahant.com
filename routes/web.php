@@ -70,3 +70,5 @@ Route::resource('skills', 'skillsController');
 Route::resource('testimonials', 'testimonialsController');
 
 Route::resource('profiles', 'profileController');
+
+Route::resource('blogs', 'blogController');

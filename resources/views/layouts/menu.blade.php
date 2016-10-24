@@ -1,6 +1,12 @@
+<li class="{{ Request::is('profiles*') ? 'active' : '' }}">
+    <a href="{!! route('profiles.index') !!}"><i class="fa fa-user"></i><span>profiles</span></a>
+</li>
+
 <li class="{{ Request::is('socials*') ? 'active' : '' }}">
     <a href="{!! route('socials.index') !!}"><i class="fa fa-facebook"></i><span>socials</span></a>
-</li><li class="{{ Request::is('homepages*') ? 'active' : '' }}">
+</li>
+
+<li class="{{ Request::is('homepages*') ? 'active' : '' }}">
     <a href="{!! route('homepages.index') !!}"><i class="fa fa-home"></i><span>homepages</span></a>
 </li>
 
@@ -32,7 +38,7 @@
     <a href="{!! route('testimonials.index') !!}"><i class="fa fa-comments-o"></i><span>testimonials</span></a>
 </li>
 
-<li class="{{ Request::is('profiles*') ? 'active' : '' }}">
-    <a href="{!! route('profiles.index') !!}"><i class="fa fa-user"></i><span>profiles</span></a>
+<li class="{{ Request::is('blogs*') ? 'active' : '' }}">
+    <a href="{!! route('blogs.index') !!}"><i class="fa fa-file-text"></i><span>blogs</span></a>
 </li>
 
