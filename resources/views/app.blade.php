@@ -16,7 +16,7 @@
                 <!-- image-logo -->
                 <!--<a class="header-title-link" href="index.html"><img src="../images/site/avatar.jpg" alt="avatar"></a>-->
                 <h1 class="site-title">{{ $myProfile->name }}</h1>
-                <p class="site-description">I am <strong id="typist-element" data-typist="{{ $myProfile->hobbies }}">a dancer.</strong></p>
+                <p class="site-description">I am <strong id="typist-element" data-typist="{{ $myProfile->hobbies }}">{{ array_last(explode(",",$myProfile->hobbies)) }}</strong></p>
                 <!-- header-social -->
                 <div class="header-bottom">
                     <!-- SOCIAL -->
