@@ -18,6 +18,7 @@ class blogController extends AppBaseController
 
     public function __construct(blogRepository $blogRepo)
     {
+        $this->middleware('auth');
         $this->blogRepository = $blogRepo;
     }
 

@@ -18,6 +18,7 @@ class skillsController extends AppBaseController
 
     public function __construct(skillsRepository $skillsRepo)
     {
+        $this->middleware('auth');
         $this->skillsRepository = $skillsRepo;
     }
 

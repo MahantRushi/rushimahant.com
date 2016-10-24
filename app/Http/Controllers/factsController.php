@@ -18,6 +18,7 @@ class factsController extends AppBaseController
 
     public function __construct(factsRepository $factsRepo)
     {
+        $this->middleware('auth');
         $this->factsRepository = $factsRepo;
     }
 

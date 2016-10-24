@@ -18,6 +18,7 @@ class testimonialsController extends AppBaseController
 
     public function __construct(testimonialsRepository $testimonialsRepo)
     {
+        $this->middleware('auth');
         $this->testimonialsRepository = $testimonialsRepo;
     }
 
