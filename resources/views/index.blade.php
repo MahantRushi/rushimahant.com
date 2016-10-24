@@ -1,50 +1,19 @@
 @extends('app')
 @section('content')
     <ul class="cd-gallery">
-        <li class="cd-item">
-            <img src="images/home/about.jpg" alt="image">
-            <a href="about.html" data-slug="about">
-                <div>
-                    <i class="pe-7s-user"></i>
-                    <h2>about me</h2>
-                    <p>Get to know about me.</p>
-                    <b>View More</b>
-                </div>
-            </a>
-        </li>
-        <li class="cd-item">
-            <img src="images/home/resume2.jpg" alt="image">
-            <a href="resume.html" data-slug="resume">
-                <div>
-                    <i class="pe-7s-id"></i>
-                    <h2>resume</h2>
-                    <p>Learn more about my studies and works.</p>
-                    <b>View More</b>
-                </div>
-            </a>
-        </li>
-        <li class="cd-item">
-            <img src="images/home/portfolio.jpg" alt="image">
-            <a id="portfolio-link" href="portfolio.html" data-slug="portfolio">
-                <div>
-                    <i class="pe-7s-portfolio"></i>
-                    <h2>portfolio</h2>
-                    <p>Find out what i have done so far.</p>
-                    <b>View More</b>
-                </div>
-            </a>
-        </li>
-        <li class="cd-item">
-            <img src="images/home/blog.jpg" alt="image">
-            <a href="blog-latest.html" data-slug="blog">
-                <div>
-                    <i class="pe-7s-notebook"></i>
-                    <h2>blog</h2>
-                    <p>Sometimes i do write about stuff.</p>
-                    <b>View More</b>
-                </div>
-            </a>
-        </li>
+        @foreach($pages as $page)
+            <li class="cd-item">
+                <img src="{{ $page->backgroundImage }}" alt="{{ $page->title }}">
+                <a href="{{ $page->link }}" data-slug="about">
+                    <div>
+                        <i class="pe-7s-{{ $page->icon }}"></i>
+                        <h2>{{ $page->title }}</h2>
+                        <p>{{ $page->punchline }}</p>
+                        <b>View More</b>
+                    </div>
+                </a>
+            </li>
+        @endforeach
         <!--<li class="cd-item">
                <img src="images/home/blog.jpg" alt="image">
             <a href="contact.html" data-slug="contact">

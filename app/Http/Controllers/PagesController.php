@@ -7,7 +7,7 @@ use App\Models\blog;
 use App\Models\clients;
 use App\Models\education;
 use App\Models\facts;
-use App\Models\homepages;
+use App\Models\homepages as Pages;
 use App\Models\profile as Profile;
 use App\Models\services;
 use App\Models\skills;
@@ -17,7 +17,7 @@ use App\Models\works;
 
 class PagesController extends Controller
 {
-    private $myProfile, $mySocial;
+    private $myProfile, $mySocial, $pages;
     /**
      * Create a new controller instance.
      *
@@ -27,6 +27,7 @@ class PagesController extends Controller
     {
         $this->myProfile = Profile::firstOrFail();
         $this->mySocial  = Socials::all();
+        $this->pages = Pages::all();
     }
 
     /**
@@ -36,7 +37,7 @@ class PagesController extends Controller
      */
     public function index()
     {
-       // dd($this->mySocial);
-        return view('index',['myProfile'=>$this->myProfile,'mySocial'=>$this->mySocial]);
+        //dd($this->pages);
+        return view('index',['myProfile'=>$this->myProfile,'mySocial'=>$this->mySocial, 'pages'=>$this->pages]);
     }
 }
