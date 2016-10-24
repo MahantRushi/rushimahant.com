@@ -24,3 +24,7 @@
     <a href="{!! route('education.index') !!}"><i class="fa fa-graduation-cap"></i><span>education</span></a>
 </li>
 
+<li class="{{ Request::is('skills*') ? 'active' : '' }}">
+    <a href="{!! route('skills.index') !!}"><i class="fa fa-level-up"></i><span>skills</span></a>
+</li>
+

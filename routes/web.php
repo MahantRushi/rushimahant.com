@@ -64,3 +64,5 @@ Route::resource('facts', 'factsController');
 Route::resource('works', 'worksController');
 
 Route::resource('education', 'educationController');
+
+Route::resource('skills', 'skillsController');
