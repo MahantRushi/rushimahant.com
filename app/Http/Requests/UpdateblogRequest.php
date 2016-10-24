@@ -25,6 +25,6 @@ class UpdateblogRequest extends FormRequest
      */
     public function rules()
     {
-        return blog::$rules;
+        return array_except(blog::$rules, ['main_image']);
     }
 }

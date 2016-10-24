@@ -125,12 +125,14 @@ class profileController extends AppBaseController
             return redirect(route('profiles.index'));
         }
 
-        $imageName = time().'.'.$request->image->getClientOriginalExtension();
-
-        $request->image->move(public_path('uploads'), $imageName);
-
         $input = $request->all();
-        $input['image'] = '/uploads/'.$imageName;
+        if(isset($request->image)){
+            $imageName = time().'.'.$request->image->getClientOriginalExtension();
+
+            $request->image->move(public_path('uploads'), $imageName);
+
+            $input['image'] = '/uploads/'.$imageName;
+        }
 
         $profile = $this->profileRepository->update($input, $id);
 

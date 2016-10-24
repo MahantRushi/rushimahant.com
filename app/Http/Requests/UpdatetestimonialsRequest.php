@@ -25,6 +25,6 @@ class UpdatetestimonialsRequest extends FormRequest
      */
     public function rules()
     {
-        return testimonials::$rules;
+        return array_except(testimonials::$rules, ['photo']);
     }
 }

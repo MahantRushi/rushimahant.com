@@ -125,12 +125,13 @@ class testimonialsController extends AppBaseController
             return redirect(route('testimonials.index'));
         }
 
-        $imageName = time().'.'.$request->photo->getClientOriginalExtension();
-
-        $request->photo->move(public_path('uploads'), $imageName);
-
         $input = $request->all();
-        $input['photo'] = '/uploads/'.$imageName;
+        if(isset($request->photo)){
+            $imageName = time().'.'.$request->photo->getClientOriginalExtension();
+            $request->photo->move(public_path('uploads'), $imageName);
+            $input['photo'] = '/uploads/'.$imageName;
+        }
+
 
         $testimonials = $this->testimonialsRepository->update($input, $id);
 

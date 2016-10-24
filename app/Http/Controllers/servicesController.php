@@ -125,13 +125,12 @@ class servicesController extends AppBaseController
             return redirect(route('services.index'));
         }
 
-        $imageName = time().'.'.$request->logo->getClientOriginalExtension();
-
-        $request->logo->move(public_path('uploads'), $imageName);
-
         $input = $request->all();
-        $input['logo'] = '/uploads/'.$imageName;
-
+        if(isset($request->backgroundImage)){
+            $imageName = time().'.'.$request->logo->getClientOriginalExtension();
+            $request->logo->move(public_path('uploads'), $imageName);
+            $input['logo'] = '/uploads/'.$imageName;
+        }
 
         $services = $this->servicesRepository->update($input, $id);
 

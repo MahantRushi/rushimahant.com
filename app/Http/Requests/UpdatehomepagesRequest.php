@@ -25,6 +25,6 @@ class UpdatehomepagesRequest extends FormRequest
      */
     public function rules()
     {
-        return homepages::$rules;
+        return array_except(homepages::$rules, ['backgroundImage']);
     }
 }

@@ -25,6 +25,6 @@ class UpdateprofileRequest extends FormRequest
      */
     public function rules()
     {
-        return profile::$rules;
+        return array_except(profile::$rules, ['image']);
     }
 }

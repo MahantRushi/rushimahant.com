@@ -125,12 +125,12 @@ class blogController extends AppBaseController
             return redirect(route('blogs.index'));
         }
 
-        $imageName = time().'.'.$request->main_image->getClientOriginalExtension();
-
-        $request->main_image->move(public_path('uploads'), $imageName);
-
         $input = $request->all();
-        $input['main_image'] = '/uploads/'.$imageName;
+        if(isset($request->main_image)){
+            $imageName = time().'.'.$request->main_image->getClientOriginalExtension();
+            $request->main_image->move(public_path('uploads'), $imageName);
+            $input['main_image'] = '/uploads/'.$imageName;
+        }
 
         $blog = $this->blogRepository->update($input, $id);
 

@@ -125,12 +125,17 @@ class homepagesController extends AppBaseController
             return redirect(route('homepages.index'));
         }
 
-        $imageName = time().'.'.$request->backgroundImage->getClientOriginalExtension();
-
-        $request->backgroundImage->move(public_path('uploads'), $imageName);
-
         $input = $request->all();
-        $input['backgroundImage'] = '/uploads/'.$imageName;
+
+        if(isset($request->backgroundImage)){
+            $imageName = time().'.'.$request->backgroundImage->getClientOriginalExtension();
+
+            $request->backgroundImage->move(public_path('uploads'), $imageName);
+
+
+            $input['backgroundImage'] = '/uploads/'.$imageName;
+        }
+
 
         $homepages = $this->homepagesRepository->update($input, $id);
 

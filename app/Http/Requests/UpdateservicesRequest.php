@@ -25,6 +25,6 @@ class UpdateservicesRequest extends FormRequest
      */
     public function rules()
     {
-        return services::$rules;
+        return array_except(services::$rules, ['logo']);
     }
 }

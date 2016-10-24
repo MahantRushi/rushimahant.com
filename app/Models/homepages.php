@@ -55,6 +55,7 @@ class homepages extends Model
         'icon' => 'required',
         'title' => 'required',
         'punchline' => 'required',
+        'backgroundImage' => 'required',
         'link' => 'required',
         'target' => 'required'
     ];

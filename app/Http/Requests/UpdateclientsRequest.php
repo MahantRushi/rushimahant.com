@@ -25,6 +25,6 @@ class UpdateclientsRequest extends FormRequest
      */
     public function rules()
     {
-        return clients::$rules;
+        return array_except(clients::$rules, ['logo']);
     }
 }
