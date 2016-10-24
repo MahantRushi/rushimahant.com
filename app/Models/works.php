@@ -17,7 +17,7 @@ class works extends Model
     public $table = 'works';
     
 
-    protected $dates = ['deleted_at'];
+    protected $dates = ['deleted_at','start','end'];
 
 
     public $fillable = [

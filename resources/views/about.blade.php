@@ -20,83 +20,20 @@
                 <!-- section-title -->
                 <!-- row -->
                 <div class="row">
-                    <!-- col -->
-                    <div class="col-sm-6 col-md-6">
-                        <!-- service -->
-                        <div class="service">
-                            <!--<i class="pe-7s-glasses"></i>-->
-                            <img src="images/site/icon-03.png" alt="Designer"/>
-                            <h4>Designer</h4>
-                            <p>I design super cool websites. It is a long established fact that a reader will be
-                                distracted by the readable content.</p>
+                    @foreach($services as $service)
+                        <!-- col -->
+                        <div class="col-sm-6 col-md-6">
+                            <!-- service -->
+                            <div class="service">
+                                <!--<i class="pe-7s-glasses"></i>-->
+                                <img src="{{ $service->logo }}" alt="{{ $service->title }}"/>
+                                <h4>{{ $service->title }}</h4>
+                                <p>{{ $service->description }}</p>
+                            </div>
+                            <!-- service -->
                         </div>
-                        <!-- service -->
-                    </div>
-                    <!-- col -->
-                    <!-- col -->
-                    <div class="col-sm-6 col-md-6">
-                        <!-- service -->
-                        <div class="service">
-                            <!--<i class="pe-7s-glasses"></i>-->
-                            <img src="images/site/icon-02.png" alt="Front-end Developer"/>
-                            <h4>Front-end Developer</h4>
-                            <p>I design super cool websites. It is a long established fact that a reader will be
-                                distracted by the readable content.</p>
-                        </div>
-                        <!-- service -->
-                    </div>
-                    <!-- col -->
-                    <!-- col -->
-                    <div class="col-sm-6 col-md-6">
-                        <!-- service -->
-                        <div class="service">
-                            <!--<i class="pe-7s-glasses"></i>-->
-                            <img src="images/site/icon-05.png" alt="Back-end Developer"/>
-                            <h4>Back-end Developer</h4>
-                            <p>I design super cool websites. It is a long established fact that a reader will be
-                                distracted by the readable content.</p>
-                        </div>
-                        <!-- service -->
-                    </div>
-                    <!-- col -->
-                    <!-- col -->
-                    <div class="col-sm-6 col-md-6">
-                        <!-- service -->
-                        <div class="service">
-                            <!--<i class="pe-7s-glasses"></i>-->
-                            <img src="images/site/icon-01.png" alt="Copywriter"/>
-                            <h4>Copywriter</h4>
-                            <p>I design super cool websites. It is a long established fact that a reader will be
-                                distracted by the readable content.</p>
-                        </div>
-                        <!-- service -->
-                    </div>
-                    <!-- col --><!-- col -->
-                    <div class="col-sm-6 col-md-6">
-                        <!-- service -->
-                        <div class="service">
-                            <!--<i class="pe-7s-scissors"></i>-->
-                            <img src="images/site/icon-07.png" alt="Blogger"/>
-                            <h4>Blogger</h4>
-                            <p>I have strong project management skills. It is a long established fact that a reader will
-                                be distracted by the readable content.</p>
-                        </div>
-                        <!-- service -->
-                    </div>
-                    <!-- col -->
-                    <!-- col -->
-                    <div class="col-sm-6 col-md-6">
-                        <!-- service -->
-                        <div class="service">
-                            <!--<i class="pe-7s-scissors"></i>-->
-                            <img src="images/site/icon-04.png" alt="Problem Solver"/>
-                            <h4>Problem Solver</h4>
-                            <p>I have strong project management skills. It is a long established fact that a reader will
-                                be distracted by the readable content.</p>
-                        </div>
-                        <!-- service -->
-                    </div>
-                    <!-- col -->
+                        <!-- col -->
+                    @endforeach
                 </div>
                 <!-- row -->
                 <!-- SERVICES -->
@@ -182,118 +119,26 @@
                     </h2>
                 </div>
                 <!-- section-title -->
-                <!-- row -->
-                <div class="row">
-                    <!-- col -->
-                    <div class="col-xs-6 col-sm-3">
-                        <!-- client -->
-                        <div class="client">
-                            <a href="http://www.clubwebsite.co.uk" target="_blank">
-                                <img src="images/clients/client-01.png" alt="client">
-                            </a>
-                            <h4>clubwebsite.co.uk</h4>
-                        </div>
-                        <!-- client -->
+                @foreach($clients->chunk(4) as $items)
+                    <!-- row -->
+                    <div class="row">
+                        @foreach($items as $client)
+                            <!-- col -->
+                            <div class="col-xs-6 col-sm-3">
+                                <!-- client -->
+                                <div class="client">
+                                    <a href="{{ $client->link }}" target="{{ $client->target }}">
+                                        <img src="{{ $client->logo }}" alt="{{ $client->title }}">
+                                    </a>
+                                    <h4>{{ $client->title }}</h4>
+                                </div>
+                                <!-- client -->
+                            </div>
+                            <!-- col -->
+                        @endforeach
                     </div>
-                    <!-- col -->
-                    <!-- col -->
-                    <div class="col-xs-6 col-sm-3">
-                        <!-- client -->
-                        <div class="client">
-                            <a href="http://www.activ8digital.com" target="_blank">
-                                <img src="images/clients/client-02.png" alt="client">
-                            </a>
-                            <h4>www.activ8digital.com</h4>
-                        </div>
-                        <!-- client -->
-                    </div>
-                    <!-- col -->
-                    <!-- col -->
-                    <div class="col-xs-6 col-sm-3">
-                        <!-- client -->
-                        <div class="client">
-                            <a href="http://www.bramhalltennis.com" target="_blank">
-                                <img src="images/clients/client-03.png" alt="client">
-                            </a>
-                            <h4>www.bramhalltennis.com</h4>
-                        </div>
-                        <!-- client -->
-                    </div>
-                    <!-- col -->
-                    <!-- col -->
-                    <div class="col-xs-6 col-sm-3">
-                        <!-- client -->
-                        <div class="client">
-                            <a href="http://www.houseofmamas.com" target="_blank">
-                                <img src="images/clients/client-04.png" alt="client">
-                            </a>
-                            <h4>www.houseofmamas.com</h4>
-                        </div>
-                        <!-- client -->
-                    </div>
-                    <!-- col -->
-                    <!-- col -->
-                    <div class="col-xs-6 col-sm-3">
-                        <!-- client -->
-                        <div class="client">
-                            <a href="http://www.enterpriseitevents.com" target="_blank">
-                                <img src="images/clients/client-05.png" alt="client">
-                            </a>
-                            <h4>www.enterpriseitevents.com</h4>
-                        </div>
-                        <!-- client -->
-                    </div>
-                    <!-- col -->
-                    <!-- col -->
-                    <div class="col-xs-6 col-sm-3">
-                        <!-- client -->
-                        <div class="client">
-                            <a href="http://www.motus3.co.uk" target="_blank">
-                                <img src="images/clients/client-06.png" alt="client">
-                            </a>
-                            <h4>www.motus3.co.uk</h4>
-                        </div>
-                        <!-- client -->
-                    </div>
-                    <!-- col -->
-                    <!-- col -->
-                    <div class="col-xs-6 col-sm-3">
-                        <!-- client -->
-                        <div class="client">
-                            <a href="http://www.matchaproperty.co.uk" target="_blank">
-                                <img src="images/clients/client-07.png" alt="client">
-                            </a>
-                            <h4>www.matchaproperty.co.uk</h4>
-                        </div>
-                        <!-- client -->
-                    </div>
-                    <!-- col -->
-                    <!-- col -->
-                    <div class="col-xs-6 col-sm-3">
-                        <!-- client -->
-                        <div class="client">
-                            <a href="http://www.sportsrevolution.co.uk" target="_blank">
-                                <img src="images/clients/client-08.png" alt="client">
-                            </a>
-                            <h4>www.sportsrevolution.co.uk</h4>
-                        </div>
-                        <!-- client -->
-                    </div>
-                    <!-- col -->
-                    <!-- col -->
-                    <div class="col-xs-6 col-sm-3">
-                        <!-- client -->
-                        <div class="client">
-                            <a href="http://www.adjfl.co.uk" target="_blank">
-                                <img src="images/clients/client-09.jpg" alt="client">
-                            </a>
-                            <h4>www.adjfl.co.uk</h4>
-                        </div>
-                        <!-- client -->
-                    </div>
-                    <!-- col -->
-                </div>
-                <!-- row -->
+                    <!-- row -->
+                @endforeach
                 <!-- CLIENTS -->
                 <!-- FUN FACT -->
                 <!-- section-title -->
@@ -303,51 +148,25 @@
                     </h2>
                 </div>
                 <!-- section-title -->
-                <!-- row -->
-                <div class="row">
-                    <!-- col -->
-                    <div class="col-xs-6 col-sm-3">
-                        <!-- fun-fact -->
-                        <div class="fun-fact">
-                            <i class="pe-7s-map-2"></i>
-                            <!--<img src="images/site/icon-03.png" alt="image"/>-->
-                            <h4>3 Countries Visited</h4>
-                        </div>
-                        <!-- fun-fact -->
+                @foreach($facts->chunk(4) as $items)
+                    <!-- row -->
+                    <div class="row">
+                        @foreach($items as $fact)
+                            <!-- col -->
+                            <div class="col-xs-6 col-sm-3">
+                                <!-- fun-fact -->
+                                <div class="fun-fact">
+                                    <i class="pe-7s-{{ $fact->icon }}"></i>
+                                    <!--<img src="images/site/icon-03.png" alt="image"/>-->
+                                    <h4>{{ $fact->caption }}</h4>
+                                </div>
+                                <!-- fun-fact -->
+                            </div>
+                            <!-- col -->
+                        @endforeach
                     </div>
-                    <!-- col -->
-                    <!-- col -->
-                    <div class="col-xs-6 col-sm-3">
-                        <!-- fun-fact -->
-                        <div class="fun-fact">
-                            <i class="pe-7s-album"></i>
-                            <h4>72 Albums Released</h4>
-                        </div>
-                        <!-- fun-fact -->
-                    </div>
-                    <!-- col -->
-                    <!-- col -->
-                    <div class="col-xs-6 col-sm-3">
-                        <!-- fun-fact -->
-                        <div class="fun-fact">
-                            <i class="pe-7s-coffee"></i>
-                            <h4>20.000 Cups Of Coffee</h4>
-                        </div>
-                        <!-- fun-fact -->
-                    </div>
-                    <!-- col -->
-                    <!-- col -->
-                    <div class="col-xs-6 col-sm-3">
-                        <!-- fun-fact -->
-                        <div class="fun-fact">
-                            <i class="pe-7s-medal"></i>
-                            <h4>12 Awards Won</h4>
-                        </div>
-                        <!-- fun-fact -->
-                    </div>
-                    <!-- col -->
-                </div>
-                <!-- row -->
+                    <!-- row -->
+                @endforeach
                 <!-- FUN FACT -->
             </div>
             <!-- .entry-content -->

@@ -21,27 +21,15 @@
                                 <!--<img src="images/site/icon-03.png" alt="image"/>-->
                             </p>
                         </div>
-                        <div class="event">
-                            <h3>Dec 2013 - Current</h3>
-                            <h4>Front End Web Developer</h4>
-                            <h5>Pixelwars Inc.</h5>
-                            <p>I currently work for Pixelwars creative studio. I create usable web interfaces, front end
-                                coding stuff and almost anything. But i love what i do.</p>
-                        </div>
-                        <div class="event">
-                            <h3>Jun 2012 - Dec 2013</h3>
-                            <h4>Web Developer</h4>
-                            <h5>Google Inc.</h5>
-                            <p>I worked as a Web Developer at Google for 3 years. I create usable web interfaces, front
-                                end coding stuff and almost anything. But i love what i do.</p>
-                        </div>
-                        <div class="event">
-                            <h3>2006</h3>
-                            <h4>Exclusive Author</h4>
-                            <h5>Envato Inc.</h5>
-                            <p>I am an Elite Author at Envato. I create usable web interfaces, front end coding stuff
-                                and almost anything. But i love what i do.</p>
-                        </div>
+                        @foreach($works as $work)
+                            <div class="event">
+                                <h3>{{ $work->start->formatLocalized('%b %Y')  }} - {{ ($work->end->year=="0001")?"Current":$work->end->formatLocalized('%b %Y') }}</h3>
+                                <h4>{{ $work->title }}</h4>
+                                <h5>{{ $work->company }}</h5>
+                                <p>{{ $work->description }}</p>
+                            </div>
+                        @endforeach
+
                         <div class="event">
                             <h2>EDUCATION</h2>
                             <p>
@@ -49,27 +37,14 @@
                                 <!--<img src="images/site/icon-03.png" alt="image"/>-->
                             </p>
                         </div>
-                        <div class="event">
-                            <h3>2002</h3>
-                            <h4>Atom Science</h4>
-                            <h5>Stanford University</h5>
-                            <p>I studied atomic stuff at Stanford University. I create usable web interfaces, front end
-                                coding stuff and almost anything. But i love what i do.</p>
-                        </div>
-                        <div class="event">
-                            <h3>2010</h3>
-                            <h4>Software Engineering</h4>
-                            <h5>Harvard University</h5>
-                            <p>I got my Master Degree at Harvard University. I create usable web interfaces, front end
-                                coding stuff and almost anything. But i love what i do.</p>
-                        </div>
-                        <div class="event">
-                            <h3>2006</h3>
-                            <h4>Computer Science</h4>
-                            <h5>MIT</h5>
-                            <p>I studied Computer Science at MIT. I create usable web interfaces, front end coding stuff
-                                and almost anything. But i love what i do.</p>
-                        </div>
+                        @foreach($education as $ed)
+                            <div class="event">
+                                <h3>{{ $ed->end }}</h3>
+                                <h4>{{ $ed->title }}</h4>
+                                <h5>{{ $ed->institution }}</h5>
+                                <p>{{ $ed->description }}</p>
+                            </div>
+                        @endforeach
                         <p><a href="Rushi_Mahant_CV.pdf" download="Rushi Mahant CV.pdf" target="_blank"
                               class="button"><i class="pe-7s-download"></i>Download CV</a></p>
                     </div>
@@ -160,31 +135,16 @@
                             </h2>
                         </div>
                         <!-- section-title -->
-                        <!-- Testimonial -->
-                        <div class="testo">
-                            <img src="images/site/testo-01.jpg" alt="someone">
-                            <h4>Chris Jones</h4>
-                            <h5>CEO / Dream Inc.</h5>
-                            <p>He is a great and hardworking guy. I am so proud of i have him as my asistant. He helped
-                                me so much. Also i am so proud of i have him as my asistant. He helped me so much.</p>
-                        </div>
-                        <!-- Testimonial -->
-                        <!-- Testimonial -->
-                        <div class="testo">
-                            <img src="images/site/testo-02.jpg" alt="someone">
-                            <h4>Melody Coen</h4>
-                            <h5>Chemist / Freelancer</h5>
-                            <p>He was a great co-worker and a friend. I would't be where i am without his support.</p>
-                        </div>
-                        <!-- Testimonial -->
-                        <!-- Testimonial -->
-                        <div class="testo">
-                            <img src="images/site/testo-03.jpg" alt="someone">
-                            <h4>Jason Wilson</h4>
-                            <h5>Lab Geek / Houston Tower</h5>
-                            <p>He is ok. I don't really know him. He looks nice.</p>
-                        </div>
-                        <!-- Testimonial -->
+                        @foreach($testimonials as $testimonial)
+                            <!-- Testimonial -->
+                            <div class="testo">
+                                <img src="{{ $testimonial->photo }}" alt="{{ $testimonial->name }}">
+                                <h4>{{ $testimonial->name }}</h4>
+                                <h5>{{ $testimonial->position }} / {{ $testimonial->company }}</h5>
+                                <p>{{ $testimonial->testimonial }}</p>
+                            </div>
+                            <!-- Testimonial -->
+                        @endforeach
                     </div>
                     <!-- col -->
                 </div>

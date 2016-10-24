@@ -18,7 +18,7 @@ class worksDataTable extends DataTable
             ->eloquent($this->query())
             ->addColumn('action', 'works.datatables_actions')
             ->editColumn('start', function ($works) {
-                return $works->end->format('d-m-Y');
+                return $works->start->format('d-m-Y');
             })
             ->editColumn('end', function ($works) {
                 if($works->end->format('Y-m-d')=="0001-11-30"){

@@ -15,17 +15,17 @@ Route::get('/', 'PagesController@index');
 
 Route::get('/index.html', 'PagesController@index');
 
-Route::get('/about.html', function () {
-    return view('about');
-});
+
+Route::get('/about.html', 'PagesController@about');
 
 Route::get('/portfolio.html', function () {
     return view('portfolio');
 });
 
-Route::get('/resume.html', function () {
-    return view('resume');
-});
+//Route::get('/resume.html', function () {
+//    return view('resume');
+//});
+Route::get('/resume.html', 'PagesController@resume');
 
 Route::get('/blog-latest.html', function () {
     return view('blog');
