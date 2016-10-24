@@ -11,7 +11,7 @@
        <div class="box box-primary">
            <div class="box-body">
                <div class="row">
-                   {!! Form::model($homepages, ['route' => ['homepages.update', $homepages->id], 'method' => 'patch','enctype' => 'multipart/form-data']) !!}
+                   {!! Form::model($homepages, ['route' => ['homepages.update', $homepages->id], 'method' => 'patch','enctype' => 'multipart/form-data', 'files' => true ]) !!}
 
                         @include('homepages.fields')
 

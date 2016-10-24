@@ -11,7 +11,7 @@
        <div class="box box-primary">
            <div class="box-body">
                <div class="row">
-                   {!! Form::model($services, ['route' => ['services.update', $services->id], 'method' => 'patch','enctype' => 'multipart/form-data']) !!}
+                   {!! Form::model($services, ['route' => ['services.update', $services->id], 'method' => 'patch','enctype' => 'multipart/form-data', 'files' => true ]) !!}
 
                         @include('services.fields')
 

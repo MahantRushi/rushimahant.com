@@ -11,7 +11,7 @@
        <div class="box box-primary">
            <div class="box-body">
                <div class="row">
-                   {!! Form::model($profile, ['route' => ['profiles.update', $profile->id], 'method' => 'patch','enctype' => 'multipart/form-data']) !!}
+                   {!! Form::model($profile, ['route' => ['profiles.update', $profile->id], 'method' => 'patch','enctype' => 'multipart/form-data', 'files' => true ]) !!}
 
                         @include('profiles.fields')
 
