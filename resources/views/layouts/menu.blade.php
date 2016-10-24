@@ -28,3 +28,7 @@
     <a href="{!! route('skills.index') !!}"><i class="fa fa-level-up"></i><span>skills</span></a>
 </li>
 
+<li class="{{ Request::is('testimonials*') ? 'active' : '' }}">
+    <a href="{!! route('testimonials.index') !!}"><i class="fa fa-comments-o"></i><span>testimonials</span></a>
+</li>
+
