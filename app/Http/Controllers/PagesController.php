@@ -10,7 +10,7 @@ use App\Models\facts as Facts;
 use App\Models\homepages as Pages;
 use App\Models\profile as Profile;
 use App\Models\services as Services;
-use App\Models\skills;
+use App\Models\skills as Skills;
 use App\Models\socials as Socials;
 use App\Models\testimonials as Testimonials;
 use App\Models\works as Works;
@@ -55,7 +55,9 @@ class PagesController extends Controller
         $testimonials = Testimonials::orderBy('order', 'asc')->get();
         $works = Works::orderBy('order', 'desc')->get();
         $education = Education::orderBy('order', 'desc')->get();
-       // dd($education);
-        return view('resume',['myProfile'=>$this->myProfile,'mySocial'=>$this->mySocial, 'pages'=>$this->pages, 'testimonials'=>$testimonials, 'works'=>$works, 'education'=>$education]);
+        $marketableSkills = Skills::where('type','Marketable')->get();
+        $transferableSkills = Skills::where('type','Transferable')->get();
+        //dd($marketableSkills);
+        return view('resume',['myProfile'=>$this->myProfile,'mySocial'=>$this->mySocial, 'pages'=>$this->pages, 'testimonials'=>$testimonials, 'works'=>$works, 'education'=>$education, 'marketableSkills'=>$marketableSkills, 'transferableSkills'=>$transferableSkills]);
     }
 }

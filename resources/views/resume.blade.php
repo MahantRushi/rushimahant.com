@@ -58,42 +58,18 @@
                             </h2>
                         </div>
                         <!-- section-title -->
-                        <!-- .skill-unit -->
-                        <div class="skill-unit">
-                            <i class="pe-7s-camera"></i>
-                            <h4>PHOTOGRAPHY</h4>
-                            <div class="bar" data-percent="80">
-                                <div class="progress"></div>
+                        @foreach($marketableSkills as $skill)
+                            <!-- .skill-unit -->
+                            <div class="skill-unit">
+                                <i class="pe-7s-{{ $skill->icon }}"></i>
+                                <h4>{{ $skill->title }}</h4>
+                                <div class="bar" data-percent="{{ $skill->level }}">
+                                    <div class="progress"></div>
+                                </div>
                             </div>
-                        </div>
-                        <!-- .skill-unit -->
-                        <!-- .skill-unit -->
-                        <div class="skill-unit">
-                            <i class="pe-7s-film"></i>
-                            <h4>VIDEOGRAPHY</h4>
-                            <div class="bar" data-percent="100">
-                                <div class="progress"></div>
-                            </div>
-                        </div>
-                        <!-- .skill-unit -->
-                        <!-- .skill-unit -->
-                        <div class="skill-unit">
-                            <i class="pe-7s-network"></i>
-                            <h4>WEB TECHNOLOGY</h4>
-                            <div class="bar" data-percent="80">
-                                <div class="progress"></div>
-                            </div>
-                        </div>
-                        <!-- .skill-unit -->
-                        <!-- .skill-unit -->
-                        <div class="skill-unit">
-                            <i class="pe-7s-key"></i>
-                            <h4>STRATEGIC CONSULTING</h4>
-                            <div class="bar" data-percent="70">
-                                <div class="progress"></div>
-                            </div>
-                        </div>
-                        <!-- .skill-unit -->
+                            <!-- .skill-unit -->
+                        @endforeach
+
                         <!-- section-title -->
                         <div class="section-title center">
                             <h2>
@@ -101,33 +77,18 @@
                             </h2>
                         </div>
                         <!-- section-title -->
-                        <!-- .skill-unit -->
-                        <div class="skill-unit">
-                            <i class="pe-7s-chat"></i>
-                            <h4>COMMUNICATIONS</h4>
-                            <div class="bar" data-percent="90">
-                                <div class="progress"></div>
-                            </div>
-                        </div>
-                        <!-- .skill-unit -->
-                        <!-- .skill-unit -->
-                        <div class="skill-unit">
-                            <i class="pe-7s-users"></i>
-                            <h4>TEAMWORK</h4>
-                            <div class="bar" data-percent="70">
-                                <div class="progress"></div>
-                            </div>
-                        </div>
-                        <!-- .skill-unit -->
-                        <!-- .skill-unit -->
-                        <div class="skill-unit">
-                            <i class="pe-7s-gleam"></i>
-                            <h4>LEADERSHIP</h4>
-                            <div class="bar" data-percent="80">
-                                <div class="progress"></div>
-                            </div>
-                        </div>
-                        <!-- .skill-unit -->
+                        @foreach($transferableSkills as $skill)
+                            <!-- .skill-unit -->
+                                <div class="skill-unit">
+                                    <i class="pe-7s-{{ $skill->icon }}"></i>
+                                    <h4>{{ $skill->title }}</h4>
+                                    <div class="bar" data-percent="{{ $skill->level }}">
+                                        <div class="progress"></div>
+                                    </div>
+                                </div>
+                                <!-- .skill-unit -->
+                        @endforeach
+
                         <!-- section-title -->
                         <div class="section-title center">
                             <h2>
