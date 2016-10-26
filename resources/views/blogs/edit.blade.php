@@ -21,3 +21,16 @@
        </div>
    </div>
 @endsection
+
+@section('scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-wysiwyg/0.3.3/bootstrap3-wysihtml5.all.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("textarea").wysihtml5();
+        });
+    </script>
+@endsection
+
+@section('css')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-wysiwyg/0.3.3/bootstrap3-wysihtml5.min.css">
+@endsection
