@@ -19,7 +19,7 @@
 <!-- Image Field -->
 <div class="form-group">
     {!! Form::label('image', 'Image:') !!}
-    <p>{!! $profile->image !!}</p>
+    <p><img src="{{ $profile->image }}" width="150"/></p>
 </div>
 
 <!-- Location Field -->
