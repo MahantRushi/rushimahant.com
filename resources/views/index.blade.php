@@ -4,7 +4,7 @@
         @foreach($pages as $page)
             <li class="cd-item">
                 <img src="{{ $page->backgroundImage }}" alt="{{ $page->title }}">
-                <a href="{{ $page->link }}" data-slug="{{ str_replace('.html', '', $page->link) }}">
+                <a href="{{ $page->link }}" id="{{ $page->title }}-link" data-slug="{{ str_replace('.html', '', $page->link) }}">
                     <div>
                         <i class="pe-7s-{{ $page->icon }}"></i>
                         <h2>{{ $page->title }}</h2>

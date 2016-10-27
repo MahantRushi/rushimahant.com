@@ -11,6 +11,13 @@
             <!-- .entry-header -->
             <header class="entry-header">
 
+                <!-- PORTFOLIO-NAV -->
+                <div class="portfolio-nav">
+                    {{--<a class="prev ajax" href="portfolio-item-03.html"></a>--}}
+                    <a class="back" href="#/portfolio"></a>
+                    {{--<a class="next ajax" href="portfolio-item-02.html"></a>--}}
+                </div>
+                <!-- PORTFOLIO-NAV -->
 
                 <!-- TITLE -->
                 <h1 class="entry-title">{{ $portfolio->title }}</h1>
