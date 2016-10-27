@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\blog;
+use App\Models\blog as Blogs;
 use App\Models\clients as Clients;
 use App\Models\education as Education;
 use App\Models\facts as Facts;
@@ -59,5 +59,19 @@ class PagesController extends Controller
         $transferableSkills = Skills::where('type','Transferable')->get();
         //dd($marketableSkills);
         return view('resume',['myProfile'=>$this->myProfile,'mySocial'=>$this->mySocial, 'pages'=>$this->pages, 'testimonials'=>$testimonials, 'works'=>$works, 'education'=>$education, 'marketableSkills'=>$marketableSkills, 'transferableSkills'=>$transferableSkills]);
+    }
+
+    public function blogLatest()
+    {
+        $latestBlogs = Blogs::orderBy('published_at', 'asc')->whereDate('published_at', '<=', \Carbon\Carbon::today()->toDateString())->get();
+        //dd($latestBlogs);
+        return view('blog',['myProfile'=>$this->myProfile,'mySocial'=>$this->mySocial, 'pages'=>$this->pages,'latestBlogs'=>$latestBlogs]);
+    }
+
+    public function blogSingle($id)
+    {
+        $blog = Blogs::find($id);
+       // dd($blog);
+        return view('blog-single',['myProfile'=>$this->myProfile,'mySocial'=>$this->mySocial, 'pages'=>$this->pages, 'blog'=>$blog]);
     }
 }

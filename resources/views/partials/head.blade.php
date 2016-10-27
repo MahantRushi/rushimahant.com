@@ -14,18 +14,18 @@
 <link href='https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 
 <!-- STYLES -->
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="css/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
-<link rel="stylesheet" type="text/css" href="css/fonts/fontello/css/fontello.css">
-<link rel="stylesheet" type="text/css" href="js/nprogress/nprogress.css">
-<link rel="stylesheet" type="text/css" href="js/jquery.magnific-popup/magnific-popup.css">
-<link rel="stylesheet" type="text/css" href="css/align.css">
-<link rel="stylesheet" type="text/css" href="css/layout.css">
-<link rel="stylesheet" type="text/css" href="css/shortcodes.css">
-<link rel="stylesheet" type="text/css" href="css/main.css">
-<link rel="stylesheet" type="text/css" href="css/768.css">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css">
+<link rel="stylesheet" type="text/css" href="/css/fonts/fontello/css/fontello.css">
+<link rel="stylesheet" type="text/css" href="/js/nprogress/nprogress.css">
+<link rel="stylesheet" type="text/css" href="/js/jquery.magnific-popup/magnific-popup.css">
+<link rel="stylesheet" type="text/css" href="/css/align.css">
+<link rel="stylesheet" type="text/css" href="/css/layout.css">
+<link rel="stylesheet" type="text/css" href="/css/shortcodes.css">
+<link rel="stylesheet" type="text/css" href="/css/main.css">
+<link rel="stylesheet" type="text/css" href="/css/768.css">
 
 <!-- INITIAL SCRIPTS -->
-<script src="js/jquery-1.11.3.min.js"></script>
-<script src="js/jquery-migrate-1.2.1.min.js"></script>
-<script src="js/modernizr.min.js"></script>
+<script src="/js/jquery-1.11.3.min.js"></script>
+<script src="/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="/js/modernizr.min.js"></script>

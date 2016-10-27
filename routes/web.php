@@ -22,21 +22,20 @@ Route::get('/portfolio.html', function () {
     return view('portfolio');
 });
 
-//Route::get('/resume.html', function () {
-//    return view('resume');
-//});
 Route::get('/resume.html', 'PagesController@resume');
 
-Route::get('/blog-latest.html', function () {
-    return view('blog');
-});
+
+Route::get('/blog-latest.html', 'PagesController@blogLatest');
+
 Route::get('/blog.html', function () {
     return redirect('/blog-latest.html');
 });
 
-Route::get('/blog-single.html', function () {
-    return view('blog-single');
-});
+//Route::get('/blog-single.html', function () {
+//    return view('blog-single');
+//});
+
+Route::get('/blog-single/{id}.html', 'PagesController@blogSingle');
 
 Auth::routes();
 
