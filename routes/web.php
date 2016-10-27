@@ -33,10 +33,6 @@ Route::get('/blog.html', function () {
     return redirect('/blog-latest.html');
 });
 
-//Route::get('/blog-single.html', function () {
-//    return view('blog-single');
-//});
-
 Route::get('/blog-single/{id}.html', 'PagesController@blogSingle');
 
 Auth::routes();
