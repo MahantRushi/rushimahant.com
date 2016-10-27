@@ -20,9 +20,13 @@ Route::get('/index.html', function (){
 
 Route::get('/about.html', 'PagesController@about');
 
-Route::get('/portfolio.html', function () {
-    return view('portfolio');
-});
+//Route::get('/portfolio.html', function () {
+//    return view('portfolio');
+//});
+
+Route::get('/portfolio.html', 'PagesController@portfolio');
+Route::get('/portfolio-item-{id}.html', 'PagesController@portfolioSingle');
+
 
 Route::get('/resume.html', 'PagesController@resume');
 

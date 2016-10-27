@@ -14,6 +14,7 @@ use App\Models\skills as Skills;
 use App\Models\socials as Socials;
 use App\Models\testimonials as Testimonials;
 use App\Models\works as Works;
+use App\Models\portfolio as Portfolio;
 
 class PagesController extends Controller
 {
@@ -75,4 +76,26 @@ class PagesController extends Controller
        // dd($blog);
         return view('blog-single',['myProfile'=>$this->myProfile,'mySocial'=>$this->mySocial, 'pages'=>$this->pages, 'blog'=>$blog, 'tags'=> $tags]);
     }
+
+    public function portfolio()
+    {
+        $portfolios = Portfolio::orderBy('order', 'asc')->get();
+        $type = array(
+            'illustration' => 'illustration',
+            'video' => 'media video',
+            'image' => 'media',
+            'soundcloud' => 'media audio',
+            'gallery'=>'media',
+            'external'=>'media'
+        );
+        //dd($portfolios);
+        return view('portfolio',['myProfile'=>$this->myProfile,'mySocial'=>$this->mySocial, 'pages'=>$this->pages, 'portfolios'=>$portfolios, 'type'=>$type]);
+    }
+    public function portfolioSingle($id)
+    {
+        $portfolio = Portfolio::find($id);
+        //dd($portfolio);
+        return view('portfolio-single',['myProfile'=>$this->myProfile,'mySocial'=>$this->mySocial, 'pages'=>$this->pages, 'portfolio'=>$portfolio]);
+    }
+
 }
