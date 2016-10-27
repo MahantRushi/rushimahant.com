@@ -71,7 +71,8 @@ class PagesController extends Controller
     public function blogSingle($id)
     {
         $blog = Blogs::find($id);
+        $tags = explode(",",$blog->tags);
        // dd($blog);
-        return view('blog-single',['myProfile'=>$this->myProfile,'mySocial'=>$this->mySocial, 'pages'=>$this->pages, 'blog'=>$blog]);
+        return view('blog-single',['myProfile'=>$this->myProfile,'mySocial'=>$this->mySocial, 'pages'=>$this->pages, 'blog'=>$blog, 'tags'=> $tags]);
     }
 }

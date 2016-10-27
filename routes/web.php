@@ -13,7 +13,9 @@
 
 Route::get('/', 'PagesController@index');
 
-Route::get('/index.html', 'PagesController@index');
+Route::get('/index.html', function (){
+    return redirect('/');
+});
 
 
 Route::get('/about.html', 'PagesController@about');

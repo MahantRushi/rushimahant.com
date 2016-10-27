@@ -75,7 +75,7 @@ class blogDataTable extends DataTable
             'title' => ['name' => 'title', 'data' => 'title'],
             'category' => ['name' => 'category', 'data' => 'category'],
             'main_image' => ['name' => 'main_image', 'data' => 'main_image', 'render' => '"<img src=\""+data+"\" height=\"50\"/>"'],
-            'post' => ['name' => 'post', 'data' => 'post'],
+            //'post' => ['name' => 'post', 'data' => 'post'],
             'tags' => ['name' => 'tags', 'data' => 'tags'],
             'published_at' => ['name' => 'published_at', 'data' => 'published_at']
         ];

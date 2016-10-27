@@ -18,14 +18,14 @@
                             <div class="media-box">
                                 <img src="{{ $blog->main_image }}" alt="{{ $blog->title }}">
                                 <div class="mask"></div>
-                                <a href="blog-single.html"></a>
+                                <a href="blog-single/{{ $blog->id }}.html"></a>
                             </div>
                             <header class="media-cell-desc">
                         <span class="cat-links">
                             <a href="#" rel="category tag">{{ $blog->category }}</a>
                         </span>
                                 <h3>
-                                    <a href="blog-single.html">{{ $blog->title }}</a>
+                                    <a href="blog-single/{{ $blog->id }}.html">{{ $blog->title }}</a>
                                 </h3>
                             </header>
                         </article>

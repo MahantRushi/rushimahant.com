@@ -17,7 +17,7 @@ class blog extends Model
     public $table = 'blogs';
     
 
-    protected $dates = ['deleted_at'];
+    protected $dates = ['deleted_at','published_at'];
 
 
     public $fillable = [
