@@ -38,6 +38,10 @@
     <a href="{!! route('testimonials.index') !!}"><i class="fa fa-comments-o"></i><span>testimonials</span></a>
 </li>
 
+<li class="{{ Request::is('portfolios*') ? 'active' : '' }}">
+    <a href="{!! route('portfolios.index') !!}"><i class="fa fa-user-secret"></i><span>portfolios</span></a>
+</li>
+
 <li class="{{ Request::is('blogs*') ? 'active' : '' }}">
     <a href="{!! route('blogs.index') !!}"><i class="fa fa-file-text"></i><span>blogs</span></a>
 </li>

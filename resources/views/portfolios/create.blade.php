@@ -3,7 +3,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Blog
+            Portfolio
         </h1>
     </section>
     <div class="content">
@@ -12,9 +12,9 @@
 
             <div class="box-body">
                 <div class="row">
-                    {!! Form::open(['route' => 'blogs.store','enctype' => 'multipart/form-data', 'files' => true ]) !!}
+                    {!! Form::open(['route' => 'portfolios.store','enctype' => 'multipart/form-data', 'files' => true]) !!}
 
-                        @include('blogs.fields')
+                        @include('portfolios.fields')
 
                     {!! Form::close() !!}
                 </div>
@@ -27,7 +27,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap3-wysiwyg/0.3.3/bootstrap3-wysihtml5.all.js"></script>
     <script>
         $(document).ready(function () {
-            $("textarea").wysihtml5({
+            $("textarea.wysi").wysihtml5({
                 "html": true,
                 toolbar: {
                     "font-styles": true, //Font styling, e.g. h1, h2, etc. Default true

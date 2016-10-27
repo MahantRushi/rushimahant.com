@@ -66,3 +66,5 @@ Route::resource('testimonials', 'testimonialsController');
 Route::resource('profiles', 'profileController');
 
 Route::resource('blogs', 'blogController');
+
+Route::resource('portfolios', 'portfolioController');
