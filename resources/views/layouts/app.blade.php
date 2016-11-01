@@ -110,7 +110,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{!! url('/') !!}">
-                    InfyOm Generator
+                    Rushi Mahant
                 </a>
             </div>
 

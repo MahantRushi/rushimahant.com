@@ -1,10 +1,10 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="uCard - Responsive HTML5 vCard Template">
+<meta name="description" content="Rushi Mahant - Portfolo, web design, Web development, Graphic Design">
 <meta name="keywords" content="vcard, html5, portfolio">
 <meta name="author" content="Pixelwars">
 
-<title>uCard</title>
+<title>Rushi Mahant</title>
 
 <!-- FAV and TOUCH ICONS -->
 <link rel="shortcut icon" href="images/ico/favicon.ico">
