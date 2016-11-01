@@ -7,15 +7,8 @@
             <header class="entry-header">
                 <h1 class="entry-title">about me</h1>
             </header>
-                <blockquote>When a party turns into soil dust and runs dry, I pour in the juice with either dance or confetti - whatever comes to my hand first.</blockquote>
+            <p>{!! $myProfile->about !!}</p>
 
-                <br/>
-            <p style="text-align: center;">
-                I grew up in a socially rich environment where my elders taught me how to help people and empathize with them.
-            </p>
-            <p style="text-align: center;">
-                I sometimes overdo Design but Pragmatism lies beneath the sheets of my Code
-            </p>
             <!-- .entry-header -->
             <!-- .entry-content -->
             <div class="entry-content">

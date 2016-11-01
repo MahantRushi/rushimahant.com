@@ -22,6 +22,12 @@
     <p><img src="{{ $profile->image }}" width="150"/></p>
 </div>
 
+<!-- Post Field -->
+<div class="form-group">
+    {!! Form::label('about', 'About:') !!}
+    <p>{!! $profile->about !!}</p>
+</div>
+
 <!-- Location Field -->
 <div class="form-group">
     {!! Form::label('location', 'Location:') !!}

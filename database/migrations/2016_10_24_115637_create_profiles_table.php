@@ -21,6 +21,7 @@ class CreateprofilesTable extends Migration
             $table->string('location', 255);
             $table->string('mobile', 30);
             $table->string('email', 255);
+            $table->text('about');
             $table->string('freelance', 30);
             $table->timestamps();
             $table->softDeletes();

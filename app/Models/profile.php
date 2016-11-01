@@ -27,6 +27,7 @@ class profile extends Model
         'location',
         'mobile',
         'email',
+        'about',
         'freelance'
     ];
 

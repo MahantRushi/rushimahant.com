@@ -17,6 +17,12 @@
 </div>
 <div class="clearfix"></div>
 
+<!-- Post Field -->
+<div class="form-group col-sm-12 col-lg-12">
+    {!! Form::label('About me', 'About me:') !!}
+    {!! Form::textarea('about', null, ['class' => 'form-control']) !!}
+</div>
+<div class="clearfix"></div>
 <!-- Location Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('location', 'Location:') !!}
