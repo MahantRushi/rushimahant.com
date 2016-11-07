@@ -1818,3 +1818,120 @@ select:focus,
 .cd-item:nth-of-type(4) a:before {
  	background-color: #152317;
     }
+
+
+
+
+/* Card Layout */
+.card-view {
+	width: 300px;
+	height: 200px;
+	margin: 10px;
+	float: left;
+	border: 10px solid #fff;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	box-shadow: 1px 1px 2px #e6e6e6;
+	cursor: default;
+}
+.card-view .card-mask, .card-view .card-content {
+	width: 300px;
+	height: 200px;
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0
+}
+.card-view img {
+	display: block;
+	position: relative
+}
+.card-view h2 {
+	text-transform: uppercase;
+	color: #fff;
+	text-align: center;
+	position: relative;
+	font-size: 17px;
+	padding: 10px;
+	background: rgba(0, 0, 0, 0.8);
+	margin: 20px 0 0 0;
+    display: inline;
+}
+.card-view p {
+	font-size: 12px;
+	position: relative;
+	color: #fff;
+	padding: 10px 20px 0px;
+	text-align: center
+}
+.card-view a.card-info {
+	display: inline-block;
+	text-decoration: none;
+	padding: 7px 14px;
+	background: #000;
+	color: #fff;
+	text-transform: uppercase;
+	box-shadow: 0 0 1px #000
+}
+.card-view a.card-info:hover {
+	box-shadow: 0 0 5px #000
+}
+
+
+.card-view-ninth .mask-1,
+.card-view-ninth .mask-2{
+	background-color: rgba(0,0,0,0.5);
+	height: 361px;
+	width: 361px;
+	background: rgba(119,0,36,0.5);
+	opacity: 1;
+	transition: all 0.3s ease-in-out 0.6s;
+}
+.card-view-ninth .mask-1 {
+	left: auto;
+	right: 0px;
+	transform: rotate(56.5deg) translateX(-180px);
+	transform-origin: 100% 0%;
+}
+.card-view-ninth .mask-2 {
+	top: auto;
+	bottom: 0px;
+	transform: rotate(56.5deg) translateX(180px);
+	transform-origin: 0% 100%;
+}
+
+.card-view-ninth .card-content{
+	background: rgba(0,0,0,0.9);
+	height: 0px;
+	opacity: 0.5;
+	width: 361px;
+	overflow: hidden;
+	transform: rotate(-33.5deg) translate(-112px,166px);
+	transform-origin: 0% 100%;
+	transition: all 0.4s ease-in-out 0.3s;
+}
+.card-view-ninth h2{
+	background: transparent;
+	margin-top: 5px;
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.card-view-ninth:hover .card-content{
+	height: 150px;
+	width: 279px;
+	opacity: 0.9;
+	top: 16px;
+	transform: rotate(0deg) translate(0px,0px);
+    padding: 20px;
+}
+.card-view-ninth:hover .mask-1,
+.card-view-ninth:hover .mask-2{
+	transition-delay: 0s;
+}
+.card-view-ninth:hover .mask-1{
+	transform: rotate(56.5deg) translateX(1px);
+}
+.card-view-ninth:hover .mask-2 {
+	transform: rotate(56.5deg) translateX(-1px);
+}
