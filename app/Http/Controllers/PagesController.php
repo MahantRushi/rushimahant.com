@@ -79,7 +79,7 @@ class PagesController extends Controller
 
     public function portfolio()
     {
-        $portfolios = Portfolio::orderBy('order', 'asc')->get();
+        $portfolios = Portfolio::where('order','>','0')->orderBy('order', 'asc')->get();
         $type = array(
             'illustration' => 'illustration',
             'video' => 'media video',

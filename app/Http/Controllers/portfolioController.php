@@ -18,6 +18,7 @@ class portfolioController extends AppBaseController
 
     public function __construct(portfolioRepository $portfolioRepo)
     {
+        $this->middleware('auth');
         $this->portfolioRepository = $portfolioRepo;
     }
 

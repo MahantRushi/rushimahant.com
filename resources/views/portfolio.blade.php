@@ -11,7 +11,7 @@
             <!-- .entry-content -->
             <div class="entry-content">
                 <!--FILTERS-->
-                <ul id="filters" class="filters">
+                <ul id="filters" class="filters hidden">
                     <li class="current">
                         <a href="#" data-filter="*">all</a>
                     </li>
