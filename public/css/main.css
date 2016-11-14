@@ -406,7 +406,7 @@ textarea,
     display: block; content: ''; position: absolute; top: 0; left: 0; height: 100%; width: 100%; background-color: #275363; opacity: .35; -webkit-transition: opacity 0.5s 0.4s, visibility 0s 0.9s; transition: opacity 0.5s 0.4s, visibility 0s 0.9s;
 	}
 .header .site-title {
-	font-size: 44px; font-size: 10vw; letter-spacing: 0; font-weight: 100; color: #fff; line-height: 1; padding: 0; margin: 0;
+	font-size: 44px; font-size: 9vw; letter-spacing: 0; font-weight: 100; color: #fff; line-height: 1; padding: 0; margin: 0; font-family: "print_clearlyregular","Helvetica Neue", Helvetica, Arial, sans-serif;
 	}
 .header-title-link + .site-title { margin: 30px 0; font-size: 64px;
 	}
@@ -489,7 +489,7 @@ textarea,
 	margin: 1em 0; padding: 0 6px; 
 	}
 .header .social-link {
-    font-size: 14px; width: auto; height: auto; border: 0; line-height: 22px; width: 25px; margin: 0; border-radius: 4px; float: none; color: rgba(255, 255, 255, 0.5);
+    font-size: 18px; width: auto; height: auto; border: 0; line-height: 22px; width: 25px; margin: 0; border-radius: 4px; float: none; color: rgba(255, 255, 255, 0.5);
 	}
 .header .header-bottom .social-link:hover {
 	background: none; color: rgba(255, 255, 255, 0.9);
@@ -1807,16 +1807,16 @@ select:focus,
 
 /* HOMEPAGE BOXES */
 .cd-item:nth-of-type(1) a:before {
- 	background-color: #000A3A;
+ 	background-color: #000;
     }
 .cd-item:nth-of-type(2) a:before {
- 	background-color: #1f4454;
+ 	background-color: #000;
     }
 .cd-item:nth-of-type(3) a:before {
- 	background-color: #417147; 
+ 	background-color: #000;
     }
 .cd-item:nth-of-type(4) a:before {
- 	background-color: #152317;
+ 	background-color: #000;
     }
 
 

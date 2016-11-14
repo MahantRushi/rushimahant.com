@@ -1,4 +1,14 @@
-/* -------------------------------- 
+@font-face {
+    font-family: 'print_clearlyregular';
+    src: url('../fonts/PrintClearly-webfont.eot');
+    src: url('../fonts/PrintClearly-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/PrintClearly-webfont.woff') format('woff'),
+    url('../fonts/PrintClearly-webfont.ttf') format('truetype'),
+    url('../fonts/PrintClearly-webfont.svg#print_clearlyregular') format('svg');
+    font-style: normal;
+}
+
+/* --------------------------------
 
 FOLDED LAYOUT STYLES
 
@@ -77,7 +87,7 @@ Main content
     font-size: 44px; z-index: 1; position: relative; margin-bottom: 12px;
 	}
 .cd-item h2 {
- 	font-size: 1.9rem; font-weight: 700; margin-top: 0; position: relative; z-index: 1; margin-bottom: .2em;
+ 	font-size: 3rem; font-weight: 100; margin-top: 0; position: relative; z-index: 1; margin-bottom: .2em; font-family: "print_clearlyregular","Helvetica Neue", Helvetica, Arial, sans-serif;
     }
 .cd-item b {
  	display: none; font-size: 10px; font-weight: 300; text-transform: uppercase; letter-spacing: 1px; padding: 10px 19px; color: rgba(255, 255, 255, 0.8); border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 16px; position: relative; z-index: 1;

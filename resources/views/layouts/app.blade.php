@@ -27,7 +27,7 @@
 
             <!-- Logo -->
             <a href="#" class="logo">
-                <b>Rushi Mahant</b>
+                <b>Rushi M.</b>
             </a>
 
             <!-- Header Navbar -->

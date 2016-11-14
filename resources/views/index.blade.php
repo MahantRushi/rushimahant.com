@@ -7,7 +7,7 @@
                 <a href="{{ $page->link }}" id="{{ $page->title }}-link" data-slug="{{ str_replace('.html', '', $page->link) }}">
                     <div>
                         <i class="pe-7s-{{ $page->icon }}"></i>
-                        <h2>{{ $page->title }}</h2>
+                        <h2 class="normal">{{ $page->title }}</h2>
                         <p>{{ $page->punchline }}</p>
                         <b>View More</b>
                     </div>
