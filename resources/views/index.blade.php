@@ -28,40 +28,41 @@
     </ul>
     <!-- .cd-gallery -->
     <!-- .page-bottom -->
+
     <div class="page-bottom">
         <!-- .row -->
         <div class="row">
             <!-- .col-md-6 -->
-            <div class="col-md-12">
-                <h4>Drop Me A Line</h4>
-                <!-- .contact-form -->
-                <div class="contact-form">
-                    <form id="contact-form" class="validate-form" method="post" action="send-mail.php">
-                        <!-- enter mail subject here -->
-                        <input type="hidden" name="subject" id="subject"
-                               value="You have a new message from Photographer!">
-                        <p>
-                            <label for="name">NAME</label>
-                            <input type="text" name="name" id="name" class="required">
-                        </p>
-                        <p>
-                            <label for="email">EMAIL</label>
-                            <input type="text" name="email" id="email" class="required email">
-                        </p>
-                        <p class="antispam">Leave this empty if you are a human :
-                            <br/><input name="url"/>
-                        </p>
-                        <p>
-                            <label for="message">MESSAGE</label>
-                            <textarea name="message" id="message" class="required"></textarea>
-                        </p>
-                        <p>
-                            <button class="submit button">Send</button>
-                        </p>
-                    </form>
-                </div>
-                <!-- .contact-form -->
-            </div>
+            {{--<div class="col-md-12">--}}
+                {{--<h4>Drop Me A Line</h4>--}}
+                {{--<!-- .contact-form -->--}}
+                {{--<div class="contact-form">--}}
+                    {{--<form id="contact-form" class="validate-form" method="post" action="send-mail.php">--}}
+                        {{--<!-- enter mail subject here -->--}}
+                        {{--<input type="hidden" name="subject" id="subject"--}}
+                               {{--value="You have a new message from Photographer!">--}}
+                        {{--<p>--}}
+                            {{--<label for="name">NAME</label>--}}
+                            {{--<input type="text" name="name" id="name" class="required">--}}
+                        {{--</p>--}}
+                        {{--<p>--}}
+                            {{--<label for="email">EMAIL</label>--}}
+                            {{--<input type="text" name="email" id="email" class="required email">--}}
+                        {{--</p>--}}
+                        {{--<p class="antispam">Leave this empty if you are a human :--}}
+                            {{--<br/><input name="url"/>--}}
+                        {{--</p>--}}
+                        {{--<p>--}}
+                            {{--<label for="message">MESSAGE</label>--}}
+                            {{--<textarea name="message" id="message" class="required"></textarea>--}}
+                        {{--</p>--}}
+                        {{--<p>--}}
+                            {{--<button class="submit button">Send</button>--}}
+                        {{--</p>--}}
+                    {{--</form>--}}
+                {{--</div>--}}
+                {{--<!-- .contact-form -->--}}
+            {{--</div>--}}
             <!-- .col-md-6 -->
             <!-- .col-md-12 -->
             <div class="col-md-12">
